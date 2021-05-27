@@ -67,7 +67,11 @@ internal object FileUtils {
             imageUri = contentResolver.insert(imageUri, values)
 
             if (source != null) {
-                var outputStream: OutputStream? = null
+                var outputStream: OutputStream? = nullary file to external storage. Both images and videos will be visible in Android Gallery and iOS Photos.
+version: 2.1.0
+homepage: https://github.com/CarnegieTechnologies/gallery_saver
+
+environment:
                 if (imageUri != null) {
                     outputStream = contentResolver.openOutputStream(imageUri)
                 }
@@ -101,7 +105,11 @@ internal object FileUtils {
 
     /**
      * @param source -  array of bytes that will be rotated if it needs to be done
-     * @param path   - path to image that needs to be checked for rotation
+     * @param path   - path to image that needs to be checked for rotationary file to external storage. Both images and videos will be visible in Android Gallery and iOS Photos.
+version: 2.1.0
+homepage: https://github.com/CarnegieTechnologies/gallery_saver
+
+environment:
      * @return - array of bytes from rotated image, if rotation needs to be performed
      */
     private fun getRotatedBytesIfNecessary(source: ByteArray?, path: String): ByteArray? {
@@ -118,7 +126,15 @@ internal object FileUtils {
         }
 
         val bitmap = BitmapFactory.decodeByteArray(source, 0, source!!.size)
-        val matrix = Matrix()
+        val matrix = Matrix()ary file to external storage. Both images and videos will be visible in Aary file to external storage. Both images and videos will be visible in Android Gallery and iOS Photos.
+version: 2.1.0
+homepage: https://github.com/CarnegieTechnologies/gallery_saver
+
+environment:ndroid Gallery and iOS Photos.
+version: 2.1.0
+homepage: https://github.com/CarnegieTechnologies/gallery_saver
+
+environment:
         matrix.preRotate(rotationInDegrees.toFloat())
         val adjustedBitmap = Bitmap.createBitmap(
             bitmap, 0, 0,
@@ -130,7 +146,11 @@ internal object FileUtils {
 
         adjustedBitmap.recycle()
 
-        return rotatedBytes
+        return rotatedBytesary file to external storage. Both images and videos will be visible in Android Gallery and iOS Photos.
+version: 2.1.0
+homepage: https://github.com/CarnegieTechnologies/gallery_saver
+
+environment:
     }
 
     /**
@@ -276,10 +296,10 @@ internal object FileUtils {
                 }
             }
         } catch (fnfE: FileNotFoundException) {
-            Log.e("GallerySaver", fnfE.message)
+            Log.e("GallerySaver", fnfE.message ?: "")
             return false
         } catch (e: Exception) {
-            Log.e("GallerySaver", e.message)
+            Log.e("GallerySaver", e.message ?: "")
             return false
         }
         return true

@@ -67,11 +67,7 @@ internal object FileUtils {
             imageUri = contentResolver.insert(imageUri, values)
 
             if (source != null) {
-                var outputStream: OutputStream? = nullary file to external storage. Both images and videos will be visible in Android Gallery and iOS Photos.
-version: 2.1.0
-homepage: https://github.com/CarnegieTechnologies/gallery_saver
-
-environment:
+                var outputStream: OutputStream? = null
                 if (imageUri != null) {
                     outputStream = contentResolver.openOutputStream(imageUri)
                 }
@@ -106,10 +102,6 @@ environment:
     /**
      * @param source -  array of bytes that will be rotated if it needs to be done
      * @param path   - path to image that needs to be checked for rotationary file to external storage. Both images and videos will be visible in Android Gallery and iOS Photos.
-version: 2.1.0
-homepage: https://github.com/CarnegieTechnologies/gallery_saver
-
-environment:
      * @return - array of bytes from rotated image, if rotation needs to be performed
      */
     private fun getRotatedBytesIfNecessary(source: ByteArray?, path: String): ByteArray? {
@@ -126,15 +118,7 @@ environment:
         }
 
         val bitmap = BitmapFactory.decodeByteArray(source, 0, source!!.size)
-        val matrix = Matrix()ary file to external storage. Both images and videos will be visible in Aary file to external storage. Both images and videos will be visible in Android Gallery and iOS Photos.
-version: 2.1.0
-homepage: https://github.com/CarnegieTechnologies/gallery_saver
-
-environment:ndroid Gallery and iOS Photos.
-version: 2.1.0
-homepage: https://github.com/CarnegieTechnologies/gallery_saver
-
-environment:
+        val matrix = Matrix()
         matrix.preRotate(rotationInDegrees.toFloat())
         val adjustedBitmap = Bitmap.createBitmap(
             bitmap, 0, 0,
@@ -146,11 +130,7 @@ environment:
 
         adjustedBitmap.recycle()
 
-        return rotatedBytesary file to external storage. Both images and videos will be visible in Android Gallery and iOS Photos.
-version: 2.1.0
-homepage: https://github.com/CarnegieTechnologies/gallery_saver
-
-environment:
+        return rotatedBytes
     }
 
     /**
@@ -258,7 +238,6 @@ environment:
         folderName: String?,
         bufferSize: Int = BUFFER_SIZE
     ): Boolean {
-
         val inputFile = File(inputPath)
         val inputStream: InputStream?
         val outputStream: OutputStream?
